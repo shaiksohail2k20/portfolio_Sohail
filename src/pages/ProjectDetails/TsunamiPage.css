@@ -1,0 +1,119 @@
+/* TsunamiPage.css */
+.tsunami-page {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #0e0c1f;
+    color: #f0f0f0;
+  }
+  .glow-link {
+    color: #9f7aea;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .glow-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #9f7aea;
+  }
+  
+  .glow-link {
+    color: #00f0ff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .glow-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00f0ff;
+    cursor: pointer;
+  }
+  
+  .tsunami-header {
+    background: #1b154b;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  
+  .tsunami-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .tsunami-nav .btn-link {
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .tsunami-nav .btn-link:hover {
+    background: #9e7bff;
+    color: #0e0c1f;
+    text-decoration: none;
+  }
+  
+  .tsunami-section {
+    padding: 3rem 0;
+  }
+  
+  .tsunami-section h2 {
+    color: #b991ff;
+    margin-bottom: 1rem;
+  }
+  
+  .tsunami-hero {
+    background: linear-gradient(to right, #3d2a92, #1b154b);
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .tsunami-hero img {
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+  
+  .cta-buttons .btn {
+    background: #9c73f8;
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .tsunami-page a { 
+    color: #b991ff; 
+    text-decoration: none; 
+  }
+  
+  .tsunami-footer {
+    background: #1b154b;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Dark table styling */
+  .table-dark {
+    background-color: #1b154b;
+    color: white;
+  }
+  
+  .table-dark th {
+    background-color: #0e0c1f;
+  }
+  
+  .custom-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .custom-list li {
+    padding: 0.5rem 0;
+  }

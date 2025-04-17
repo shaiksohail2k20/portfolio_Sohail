@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predicting Tsunami Impact | Sohail Shaik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #0e0c1f;
+      color: #f0f0f0;
+    }
+    header, footer {
+      background: #1b154b;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background: #9e7bff;
+      color: #0e0c1f;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #b991ff;
+      margin-bottom: 1rem;
+    }
+    .hero {
+      background: linear-gradient(to right, #3d2a92, #1b154b);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero img {
+      max-width: 100%;
+      margin: 2rem 0;
+    }
+    .cta-buttons button {
+      background: #9c73f8;
+      border: none;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #222;
+    }
+    a { color: #b991ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Predicting Tsunami Impact using Machine Learning</h1>
+  <nav>
+    <a href="#overview" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#results">Results</a>
+    <a href="#literature">Literature</a>
+    <a href="#challenges">Challenges</a>
+    <a href="#future">Future Work</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="overview" class="hero">
+  <h2>Overview</h2>
+  <p>This project uses statistical and machine learning techniques to predict tsunami impact using historical data. By analyzing patterns in seismic and oceanic parameters, the model aims to enhance early warning systems.</p>
+  <img src="tsunami-map.gif" alt="Tsunami Path Animation">
+  <div class="cta-buttons">
+    <button onclick="window.open('report.pdf')">Full Report</button>
+    <button onclick="window.open('https://github.com/sohailtsunami/ml-tsunami-impact')">GitHub</button>
+    <button onclick="document.getElementById('contact').scrollIntoView()">Contact</button>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About the Project</h2>
+  <p><strong>Problem Statement:</strong> Traditional models struggle to predict the complex impacts of tsunamis. This project aims to bridge that gap using data-driven machine learning methods.</p>
+  <p><strong>Objectives:</strong> Predict tsunami wave height, affected population, and damages using seismic and oceanographic features.</p>
+  <p><strong>Real-world Impact:</strong> Helps disaster management authorities improve response strategies and mitigate losses.</p>
+</section>
+
+<section id="dataset">
+  <h2>Dataset & Sources</h2>
+  <p>We used the NOAA NGDC Historical Tsunami Event Database and a cleaned Kaggle dataset.</p>
+  <ul>
+    <li>Records: 1500+ tsunami events</li>
+    <li>Features: Date, Magnitude, Wave Height, Deaths, Country, Coordinates</li>
+  </ul>
+  <p><a href="https://www.kaggle.com/datasets/andrewmvd/tsunami-dataset">View Kaggle Dataset</a></p>
+</section>
+
+<section id="methodology">
+  <h2>Methodology</h2>
+  <p><strong>Preprocessing:</strong> Missing value imputation, normalization (Min-Max, Z-score)</p>
+  <p><strong>Feature Engineering:</strong> PCA for seismic features, derived features like normalized wave height</p>
+  <p><strong>Models:</strong> Decision Tree, Random Forest, SVM, Neural Networks</p>
+  <h3>Evaluation Metrics</h3>
+  <table>
+    <tr><th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1-score</th></tr>
+    <tr><td>Decision Tree</td><td>85%</td><td>82%</td><td>78%</td><td>80%</td></tr>
+    <tr><td>Random Forest</td><td>92%</td><td>91%</td><td>89%</td><td>90%</td></tr>
+    <tr><td>SVM</td><td>88%</td><td>87%</td><td>85%</td><td>86%</td></tr>
+    <tr><td>Neural Network</td><td>94%</td><td>93%</td><td>91%</td><td>92%</td></tr>
+  </table>
+</section>
+
+<section id="results">
+  <h2>Results & Visualizations</h2>
+  <ul>
+    <li>Geospatial heatmaps of tsunami-prone zones</li>
+    <li>Monthly and country-wise distribution</li>
+    <li>Wave height vs. death correlation graphs</li>
+    <li>Confusion matrix heatmap of best model</li>
+  </ul>
+  <p><img src="confusion_matrix.png" alt="Confusion Matrix Heatmap" /></p>
+</section>
+
+<section id="literature">
+  <h2>Literature Review</h2>
+  <p>Includes review of 11 papers spanning GNSS, SAR, ML ensembles, and early warning frameworks. Covers challenges like real-time latency, interpretability, and domain shift.</p>
+  <p><a href="https://ieeexplore.ieee.org/document/9264040">Key Reference 1</a>, <a href="https://www.sciencedirect.com/science/article/pii/S0012825222003579">Key Reference 2</a></p>
+</section>
+
+<section id="challenges">
+  <h2>Challenges</h2>
+  <ul>
+    <li>Data sparsity and imbalance</li>
+    <li>Real-time latency constraints</li>
+    <li>Model overfitting and domain generalization</li>
+  </ul>
+</section>
+
+<section id="future">
+  <h2>Future Work</h2>
+  <ul>
+    <li>Real-time sensor and satellite data integration</li>
+    <li>LSTM and Transformer models for temporal dependencies</li>
+    <li>GIS-based risk visualization tools</li>
+    <li>Explainable AI using SHAP/LIME</li>
+  </ul>
+</section>
+
+<section id="team">
+  <h2>Team & Acknowledgements</h2>
+  <p><strong>Name:</strong> Shaik Sohail</p>
+  <p><strong>Roll No:</strong> 242CS033</p>
+  <p><strong>Institute:</strong> NITK Surathkal</p>
+  <p><strong>Email:</strong> shaiksohail.242cs033@nitk.edu.in</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:shaiksohail.242cs033@nitk.edu.in">shaiksohail.242cs033@nitk.edu.in</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/sohailshaik">@sohailshaik</a></p>
+  <p><a href="https://forms.gle/your-feedback-form">Feedback Form</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Shaik Sohail | NITK Surathkal
+</footer>
+
+</body>
+</html>
